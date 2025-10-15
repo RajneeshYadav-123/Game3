@@ -1,0 +1,129 @@
+/* Game Container */
+.game-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100vh;
+  background: radial-gradient(circle at center, #0b0b0b, #1a1a1a);
+  font-family: "Poppins", Arial, sans-serif;
+  padding: 20px;
+  color: white;
+  overflow: hidden;
+}
+
+/* Left Section */
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* 🏷️ Game Title */
+.left-side h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #00c3ff;
+  text-shadow: 0 0 15px rgba(0, 195, 255, 0.6);
+}
+
+/* Scoreboard Container */
+.scoreboard-container {
+  display: flex;
+  flex-direction: row;
+  gap: 200px;
+}
+
+/* Individual Score Item */
+.score-item {
+  background: #1e1e1e;
+  padding: 20px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+  font-size: 1rem;
+  min-width: 90px;
+  text-align: center;
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+/* Consolidate Button */
+.consolidate-btn {
+  background: linear-gradient(90deg, #0066ff, #0099ff);
+  padding: 30px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-left: 150px;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Consolidate Button Hover Effect */
+.consolidate-btn:hover {
+  background: linear-gradient(90deg, #3388ff, #33bbff);
+}
+
+/* Grid Container */
+.grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Game Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 60px);
+  grid-template-rows: repeat(8, 60px);
+  gap: 6px;
+}
+
+/* Game Grid Cells */ 
+.cell {
+  width: 60px;
+  height: 60px;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Selected Cell */
+.cell.selected {
+  outline: 2px solid #ffcc00;
+  transform: scale(1.05);
+}
+
+/* Token */
+.token {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+/* Selected Token */
+.token.selected {
+  transform: scale(1.2);
+  border-color: yellow;
+}
+
+/* Consolidation Badge */
+.consolidation-badge {
+  width: 12px;
+  height: 12px;
+  background-color: #f39c12;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: 2px solid #333;
+}
